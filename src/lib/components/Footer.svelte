@@ -16,10 +16,10 @@
 <footer id="contact">
     <div class="wrap">
         <div use:reveal>
-            <div class="eyebrow"><span class="dot"></span>07 — Contact me!</div>
+            <div class="eyebrow"><span class="dot"></span>07 — Contact me</div>
             <h2>Let's work together.</h2>
             <a href="mailto:kevindemeijer@proton.me" class="email"
-                >kevindemeijer@proton.me</a
+                >kevin@devmeijer.com</a
             >
         </div>
 
