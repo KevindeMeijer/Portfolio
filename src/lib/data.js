@@ -1,29 +1,30 @@
 export const facts = [
   {
-    k: "Based in",
-    v: "the Netherlands",
+    k: "Where I'm from",
+    v: "The Netherlands 🇳🇱",
     bg: "#FBFBF9",
     fg: "#16150F",
     sub: "#A6A59D",
   },
   {
-    k: "Currently",
-    v: "UX Designer · Centraal Beheer",
-    bg: "#1E4FA3",
+    k: "What I do",
+    v: "UX Designer | Centraal Beheer",
+    bg: "var(--blue)",
     fg: "#FFFFFF",
     sub: "rgba(255,255,255,0.72)",
   },
   {
     k: "Focus",
-    v: "UX × Photography",
-    bg: "#F7C600",
+    v: "Research/Design/Photography",
+    bg: "var(--yellow)",
     fg: "#16150F",
     sub: "rgba(22,21,15,0.6)",
   },
   {
     k: "Status",
-    v: "Open to opportunities",
-    bg: "#E0312A",
+    v: "Working",
+    // Need to put something better here
+    bg: "var(--red)",
     fg: "#FFFFFF",
     sub: "rgba(255,255,255,0.78)",
   },
@@ -107,32 +108,32 @@ export const tools = [
 ];
 
 export const photos = [
-  { cap: "Kanonniersdagen — Nederlands Vestingmuseum", color: "#E0312A" },
-  { cap: "Promo — Studievereniging Indicium", color: "#1E4FA3" },
-  { cap: "Documentary — Photojournalism minor", color: "#F7C600" },
+  { cap: "Nederlands Vestingmuseum", color: "#E0312A" },
+  { cap: "Studievereniging Indicium", color: "#1E4FA3" },
+  { cap: "Photojournalism minor", color: "#F7C600" },
 ];
 
 export const education = [
   {
-    period: "2019 — 24",
+    period: "2019 — 2024",
     title: "BSc — Open-ICT",
     org: "Hogeschool Utrecht",
-    note: "Member & reviewer at study association Indicium; worked as a student mentor.",
+    note: "Chairman at study association Indicium in 2021. Student mentor and reviewer for Open-IT students during my time at the Hogeschool Utrecht.",
   },
   {
-    period: "2022 — 23",
+    period: "2022 — 2023",
     title: "Minor — Photojournalism & Visual Editing",
     org: "Hogeschool Utrecht",
-    note: "Press & documentary photography; editing in Adobe Lightroom.",
+    note: "Press & documentary photography, editing in Adobe Lightroom (Classic), writing articles. Documentary about local Repair Cafés.",
   },
   {
-    period: "2017 — 19",
+    period: "2017 — 2019",
     title: "Secondary Education (HAVO) — Economics & Society",
     org: "Vituscollege",
-    note: "Graduated with an 8 average. Active in stage lighting & sound, class representation, and Cambridge Advanced English.",
+    note: "Active in stage lighting & sound, class representation, and Cambridge Advanced English. Graduated with an 8 on average.",
   },
   {
-    period: "2012 — 17",
+    period: "2012 — 2017",
     title: "Pre-University Education (VWO) — Science & Technology",
     org: "Vituscollege",
     note: "Active in stage lighting & sound, class representation, and Cambridge Advanced English.",
@@ -144,20 +145,20 @@ export const certs = [
     period: "2025",
     title: "UX Prototyping",
     org: "UX Academy Nederland",
-    note: "Hands-on training in building and testing interactive prototypes — validating flows and interactions before they reach development.",
+    note: "Hands-on training in building and testing interactive prototypes. Learning how to validate flows and interactions by quick sketches and advanced drawings.",
   },
   {
     period: "2025",
     title: "Introduction to Web Accessibility",
     org: "edX",
-    note: "Foundations of WCAG and inclusive design practice — building interfaces that work for everyone, including assistive technology.",
+    note: "Foundations of WCAG and inclusive design practice. Building interfaces that work for everyone, including assistive technology.",
   },
   {
     period: "2018",
     title:
       "C1 Cambridge English Level 2 Certificate in ESOL International (Advanced)",
     org: "Cambridge English",
-    note: "Advanced-level English language certification — demonstrating fluent, confident command of written and spoken English.",
+    note: "Advanced-level English language certification, demonstrating fluent, confident command of written and spoken English.",
   },
 ];
 
@@ -195,7 +196,7 @@ export const socials = [
   {
     icon: "tidal",
     link: "https://tidal.com/@kevin_dm",
-    label: "Tidal — @kevin_dm",
+    label: "Tidal",
     bg: "#000000",
   },
   {
@@ -207,7 +208,7 @@ export const socials = [
   {
     icon: "discord",
     link: "https://discord.com/users/281123679138480128",
-    label: "Discord — @kevin_dm",
+    label: "Discord",
     bg: "#5865F2",
   },
   {

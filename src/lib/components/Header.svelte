@@ -10,6 +10,7 @@
             return new Intl.DateTimeFormat("en-GB", {
                 hour: "2-digit",
                 minute: "2-digit",
+                second: "2-digit",
                 timeZone: "Europe/Amsterdam",
             }).format(new Date());
         } catch (e) {
@@ -18,9 +19,10 @@
     }
 
     onMount(() => {
-        const tick = () => (clockText = `${formatAmsterdamTime()} CET`);
+        const tick = () =>
+            (clockText = `It's ${formatAmsterdamTime()} in Amsterdam`);
         tick();
-        timer = setInterval(tick, 15000);
+        timer = setInterval(tick, 1000);
     });
 
     onDestroy(() => clearInterval(timer));

@@ -46,7 +46,7 @@
         <div class="copyright">
             <span>© {year} Kevin de Meijer</span>
             <span>the Netherlands</span>
-            <a href="#top" class="back-to-top">Back to top ↑</a>
+            <a href="#top" class="back-to-top">Back to the top ↑</a>
         </div>
     </div>
 </footer>
