@@ -30,8 +30,10 @@ export const facts = [
   },
 ];
 
+// `href` points at the focus/case-study page for that org (client-side route).
 export const work = [
   {
+    href: "/work/centraal-beheer",
     period: "March 2025 — Now",
     type: "Full-time",
     meta: "Apeldoorn, NL · Hybrid",
@@ -42,6 +44,7 @@ export const work = [
     toolsLabel: "UX Design / UX Research / Figma",
   },
   {
+    href: "/work/centraal-beheer",
     period: "2024",
     type: "Internship",
     meta: "Apeldoorn, NL · Hybrid · 7 mo",
@@ -52,6 +55,7 @@ export const work = [
     toolsLabel: "UX Design / UX Research / Figma",
   },
   {
+    href: "/work/devdroplets-fyndr",
     period: "2021 — 2022",
     type: "Internship",
     meta: "Utrecht, NL · Hybrid",
@@ -62,6 +66,7 @@ export const work = [
     toolsLabel: "UX Design / Vue / SCSS / Figma / Git(labs)",
   },
   {
+    href: "/work/devdroplets-la",
     period: "2020 — 2021",
     type: "Internship",
     meta: "Utrecht, NL · On-site",
@@ -107,10 +112,26 @@ export const tools = [
   { name: "WCAG 2.x", bg: "#16150F", fg: "#FFFFFF" },
 ];
 
+// `href` opens the full series; `src` is the cover image (empty = placeholder).
 export const photos = [
-  { cap: "Nederlands Vestingmuseum", color: "#E0312A" },
-  { cap: "Studievereniging Indicium", color: "#1E4FA3" },
-  { cap: "Photojournalism minor", color: "#F7C600" },
+  {
+    cap: "Nederlands Vestingmuseum",
+    color: "#E0312A",
+    href: "/photography/vestingmuseum",
+    src: "",
+  },
+  {
+    cap: "Studievereniging Indicium",
+    color: "#1E4FA3",
+    href: "/photography/indicium",
+    src: "",
+  },
+  {
+    cap: "Photojournalism minor",
+    color: "#F7C600",
+    href: "/photography/photojournalism",
+    src: "",
+  },
 ];
 
 export const education = [

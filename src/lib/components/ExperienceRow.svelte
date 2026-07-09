@@ -1,10 +1,11 @@
 <script>
+  import { link } from 'svelte-spa-router';
   import { reveal } from '../reveal.js';
 
   let { entry } = $props();
 </script>
 
-<div class="row" use:reveal>
+<a class="row" href={entry.href} use:link use:reveal>
   <div class="meta-col">
     <div class="period">{entry.period}</div>
     <div class="type">{entry.type}</div>
@@ -16,15 +17,20 @@
     <p class="summary">{entry.summary}</p>
     <div class="tools">{entry.toolsLabel}</div>
   </div>
-</div>
+  <div class="arrow" aria-hidden="true">→</div>
+</a>
 
 <style>
   .row {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
     border-top: 1px solid var(--line);
     padding: clamp(24px, 3.4vw, 38px) clamp(8px, 1.6vw, 20px);
     display: grid;
-    grid-template-columns: minmax(120px, 170px) minmax(0, 1fr);
+    grid-template-columns: minmax(120px, 170px) minmax(0, 1fr) auto;
     gap: clamp(16px, 3vw, 48px);
+    align-items: start;
     border-radius: 8px;
     transition: opacity 0.9s cubic-bezier(0.22, 0.61, 0.18, 1), transform 0.9s cubic-bezier(0.22, 0.61, 0.18, 1),
       background 0.4s;
@@ -32,6 +38,29 @@
 
   .row:hover {
     background: var(--surface-alt);
+  }
+
+  /* Arrow button — bottom-up ink fill sweep, matching the site's link animation */
+  .arrow {
+    width: 44px;
+    height: 44px;
+    flex: 0 0 auto;
+    border: 2px solid var(--ink);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: var(--text);
+    background-image: linear-gradient(var(--ink), var(--ink));
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    background-size: 100% 0%;
+    transition: background-size 0.35s ease, color 0.35s ease;
+  }
+
+  .row:hover .arrow {
+    background-size: 100% 100%;
+    color: var(--page);
   }
 
   .period {

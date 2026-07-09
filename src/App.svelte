@@ -1,30 +1,16 @@
 <script>
-  import Header from './lib/components/Header.svelte';
-  import Hero from './lib/components/Hero.svelte';
-  import FactsStrip from './lib/components/FactsStrip.svelte';
-  import Experience from './lib/components/Experience.svelte';
-  import About from './lib/components/About.svelte';
-  import Craft from './lib/components/Craft.svelte';
-  import Photography from './lib/components/Photography.svelte';
-  import StudiesAndCerts from './lib/components/StudiesAndCerts.svelte';
-  import Footer from './lib/components/Footer.svelte';
+  import Router from 'svelte-spa-router';
+  import Home from './lib/pages/Home.svelte';
+  import WorkDetail from './lib/pages/WorkDetail.svelte';
+  import PhotographyDetail from './lib/pages/PhotographyDetail.svelte';
+
+  const routes = {
+    '/': Home,
+    '/work/:slug': WorkDetail,
+    '/photography/:slug': PhotographyDetail,
+    // Unknown routes fall back to the home page.
+    '*': Home,
+  };
 </script>
 
-<div id="top">
-  <Header />
-  <Hero />
-  <FactsStrip />
-  <Experience />
-  <About />
-  <Craft />
-  <Photography />
-  <StudiesAndCerts />
-  <Footer />
-</div>
-
-<style>
-  #top {
-    min-height: 100%;
-    overflow-x: hidden;
-  }
-</style>
+<Router {routes} />
