@@ -1,4 +1,8 @@
 export function reveal(node, params = {}) {
+  // The hidden start state lives in global CSS keyed off [data-reveal];
+  // stamping the attribute here is what actually arms the transition.
+  node.setAttribute('data-reveal', '');
+
   let delay = params?.delay ?? 0;
   if (delay) node.style.transitionDelay = `${delay}ms`;
 
