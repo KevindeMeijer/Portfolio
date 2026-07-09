@@ -2,6 +2,8 @@
   import { onMount } from 'svelte';
   import { link } from 'svelte-spa-router';
   import { photos } from '../data.js';
+  import FocusHeader from '../components/FocusHeader.svelte';
+  import FocusFooter from '../components/FocusFooter.svelte';
 
   let { params = {} } = $props();
 
@@ -11,6 +13,8 @@
 
   onMount(() => window.scrollTo(0, 0));
 </script>
+
+<FocusHeader />
 
 <main class="focus">
   <div class="wrap">
@@ -24,6 +28,8 @@
     </div>
   </div>
 </main>
+
+<FocusFooter />
 
 <style>
   .focus {
@@ -46,11 +52,19 @@
     letter-spacing: 0.12em;
     text-transform: uppercase;
     color: var(--text-muted);
-    transition: color 0.3s;
+    background-image: linear-gradient(var(--ink), var(--ink));
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    background-size: 100% 1.5px;
+    padding: 2px 5px;
+    transition:
+      background-size 0.35s ease,
+      color 0.35s ease;
   }
 
   .back:hover {
-    color: var(--text);
+    background-size: 100% 100%;
+    color: var(--page);
   }
 
   .eyebrow {
