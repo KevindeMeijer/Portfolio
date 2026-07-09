@@ -18,8 +18,8 @@
         <div use:reveal>
             <div class="eyebrow"><span class="dot"></span>07 — Contact me</div>
             <h2>Let's work together.</h2>
-            <a href="mailto:kevindemeijer@proton.me" class="email"
-                >kevin@devmeijer.com</a
+            <a href="mailto:portfolio@devmeijer.com" class="email"
+                >portfolio@devmeijer.com</a
             >
         </div>
 
