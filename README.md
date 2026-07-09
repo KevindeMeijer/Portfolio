@@ -1,6 +1,6 @@
 # Kevin de Meijer — Portfolio
 
-Personal portfolio site for (myself) Kevin de Meijer, UX designer and photographer based in the Netherlands. Single-page site with a hero, experience timeline, about section, craft/skills overview, photography grid, education/certifications, and contact footer, with a light/dark theme toggle.
+Personal portfolio site for (myself) Kevin de Meijer, UX designer and photographer based in the Netherlands. The home page has a hero, experience timeline, about section, craft/skills overview, photography grid, education/certifications, and contact footer, with a light/dark theme toggle. Client-side routing adds dedicated focus pages: case-study detail pages for work entries and photo-series detail pages for photography, each with a minimal header and footer.
 
 Built with [Svelte 5](https://svelte.dev) and [Vite](https://vitejs.dev) and the help of [Claude](https://claude.ai).
 
@@ -34,6 +34,7 @@ taskkill /PID <pid> /F
 
 - [Svelte 5](https://svelte.dev) — components
 - [Vite](https://vitejs.dev) — dev server and build
+- [svelte-spa-router](https://github.com/ItalyPaleAle/svelte-spa-router) — hash-based client-side routing
 - [simple-icons](https://simpleicons.org) — social icon glyphs
 - [IBM Carbon Design Icons](https://www.ibm.com/design/language/icons/) — extra UI/UX icon glyphs
 - Plain CSS with custom properties for theming (light/dark)
@@ -42,15 +43,19 @@ taskkill /PID <pid> /F
 
 ```
 src/
-  App.svelte               # Page shell
+  App.svelte               # Router setup and route table
   main.js                  # Entry point
   app.css                  # Global styles/tokens
   lib/
     theme.js               # Light/dark theme store
     reveal.js              # Scroll-reveal behavior
     data.js                # Website content
-    components/            # One component per section
-    icons/                 # IBM/Carbon Design Icons
+    pages/                 # Routed pages
+      Home.svelte          #   / — full single-page site
+      WorkDetail.svelte    #   /work/:slug — case-study page
+      PhotographyDetail.svelte  # /photography/:slug — photo-series page
+    components/            # Section and shared components
+    icons/                 # IBM/Carbon Design Icons + theme toggle glyphs
 ```
 
 ## License

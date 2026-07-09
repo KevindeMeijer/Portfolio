@@ -2,9 +2,6 @@
     import moonRaw from "../icons/moon.svg?raw";
     import sunRaw from "../icons/sun.svg?raw";
 
-    // Same trick as SocialIcon: pull just the glyph shapes out of the supplied
-    // SVGs and drop their <defs>/<style> and transparent-rectangle padding, so
-    // the icon inherits `fill: currentColor` and follows the theme.
     function parseGlyph(svgText) {
         const doc = new DOMParser().parseFromString(svgText, "image/svg+xml");
         const svg = doc.querySelector("svg");
