@@ -2,7 +2,7 @@
   import { onMount } from 'svelte';
   import { link } from 'svelte-spa-router';
   import { photos } from '../data.js';
-  import FocusHeader from '../components/FocusHeader.svelte';
+  import Header from '../components/Header.svelte';
   import FocusFooter from '../components/FocusFooter.svelte';
 
   let { params = {} } = $props();
@@ -14,7 +14,7 @@
   onMount(() => window.scrollTo(0, 0));
 </script>
 
-<FocusHeader />
+<Header focus />
 
 <main class="focus">
   <div class="wrap">

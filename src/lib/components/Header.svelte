@@ -1,29 +1,9 @@
-<script module>
-    import moonRaw from "../icons/moon.svg?raw";
-    import sunRaw from "../icons/sun.svg?raw";
-
-    function parseGlyph(svgText) {
-        const doc = new DOMParser().parseFromString(svgText, "image/svg+xml");
-        const svg = doc.querySelector("svg");
-        const viewBox = svg.getAttribute("viewBox") || "0 0 32 32";
-        const markup = Array.from(svg.querySelectorAll("path, circle, rect"))
-            .filter(
-                (el) =>
-                    el.getAttribute("class") !== "cls-1" &&
-                    el.getAttribute("id") !== "_Transparent_Rectangle_",
-            )
-            .map((el) => el.outerHTML)
-            .join("");
-        return { viewBox, markup };
-    }
-
-    const moon = parseGlyph(moonRaw);
-    const sun = parseGlyph(sunRaw);
-</script>
-
 <script>
     import { onMount, onDestroy } from "svelte";
-    import { theme } from "../theme.js";
+    import { link } from "svelte-spa-router";
+    import ThemeToggle from "./ThemeToggle.svelte";
+
+    let { focus = false } = $props();
 
     let clockText = $state("—");
     let timer;
@@ -42,6 +22,7 @@
     }
 
     onMount(() => {
+        if (focus) return;
         const tick = () =>
             (clockText = `It's ${formatAmsterdamTime()} in Amsterdam`);
         tick();
@@ -60,44 +41,22 @@
 
 <header>
     <div class="bar">
-        <a href="#top" class="logo">Kevin&nbsp;de&nbsp;Meijer</a>
+        {#if focus}
+            <a href="/" use:link class="logo">Kevin&nbsp;de&nbsp;Meijer</a>
+        {:else}
+            <a href="#top" class="logo">Kevin&nbsp;de&nbsp;Meijer</a>
+        {/if}
         <nav>
-            {#each navLinks as link}
-                <a href={link.href} class="nav-link">{link.label}</a>
-            {/each}
-            <span class="clock">
-                <span class="dot"></span>
-                <span>{clockText}</span>
-            </span>
-            <button
-                type="button"
-                class="theme-toggle"
-                aria-label="Toggle colour theme"
-                title="Toggle colour theme"
-                onclick={() => theme.toggle()}
-            >
-                {#if $theme === "dark"}
-                    <svg
-                        viewBox={sun.viewBox}
-                        width="16"
-                        height="16"
-                        fill="currentColor"
-                        aria-hidden="true"
-                    >
-                        {@html sun.markup}
-                    </svg>
-                {:else}
-                    <svg
-                        viewBox={moon.viewBox}
-                        width="16"
-                        height="16"
-                        fill="currentColor"
-                        aria-hidden="true"
-                    >
-                        {@html moon.markup}
-                    </svg>
-                {/if}
-            </button>
+            {#if !focus}
+                {#each navLinks as navLink}
+                    <a href={navLink.href} class="nav-link">{navLink.label}</a>
+                {/each}
+                <span class="clock">
+                    <span class="dot"></span>
+                    <span>{clockText}</span>
+                </span>
+            {/if}
+            <ThemeToggle />
         </nav>
     </div>
 </header>
@@ -173,27 +132,5 @@
         height: 8px;
         background: var(--red);
         display: inline-block;
-    }
-
-    .theme-toggle {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        width: 34px;
-        height: 34px;
-        padding: 0;
-        background: transparent;
-        border: 1.5px solid var(--ink);
-        border-radius: 0;
-        color: inherit;
-        cursor: pointer;
-        transition:
-            background 0.3s ease,
-            color 0.3s ease;
-    }
-
-    .theme-toggle:hover {
-        background: var(--ink);
-        color: var(--page);
     }
 </style>
