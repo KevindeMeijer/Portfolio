@@ -1,9 +1,9 @@
 <script module>
-  import linkedinRaw from '../icons/logo--linkedin.svg?raw';
-  import githubRaw from '../icons/logo--github.svg?raw';
-  import discordRaw from '../icons/logo--discord.svg?raw';
-  import instagramRaw from '../icons/logo--instagram.svg?raw';
-  import youtubeRaw from '../icons/logo--youtube.svg?raw';
+  import linkedinRaw from '../icons/linkedin.svg?raw';
+  import githubRaw from '../icons/github.svg?raw';
+  import discordRaw from '../icons/discord.svg?raw';
+  import instagramRaw from '../icons/instagram.svg?raw';
+  import youtubeRaw from '../icons/youtube.svg?raw';
   import { siTwitch, siTidal, siTelegram, siSteam } from 'simple-icons';
 
   // Provided SVGs carry their own <defs>/<style> classes, which would collide across
