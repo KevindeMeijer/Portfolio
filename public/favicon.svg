@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <!-- Mondriaan-inspired mark for Kevin de Meijer -->
+  <rect width="32" height="32" rx="4" fill="#fbfbf9"/>
+  <g>
+    <rect x="1" y="1" width="17" height="17" fill="#e0312a"/>
+    <rect x="1" y="21" width="17" height="10" fill="#f7c600"/>
+    <rect x="21" y="14" width="10" height="17" fill="#1e4fa3"/>
+  </g>
+  <!-- black grid lines -->
+  <g fill="#16150f">
+    <rect x="18" y="0" width="3" height="32"/>
+    <rect x="0" y="18" width="21" height="3"/>
+    <rect x="18" y="11" width="14" height="3"/>
+  </g>
+  <rect x="0.5" y="0.5" width="31" height="31" rx="4" fill="none" stroke="#16150f" stroke-width="1.5"/>
+</svg>
