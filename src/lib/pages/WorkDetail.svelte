@@ -3,7 +3,7 @@
   import { link } from 'svelte-spa-router';
   import { work } from '../data.js';
   import Header from '../components/Header.svelte';
-  import FocusFooter from '../components/FocusFooter.svelte';
+  import Footer from '../components/Footer.svelte';
 
   let { params = {} } = $props();
 
@@ -39,7 +39,7 @@
   </div>
 </main>
 
-<FocusFooter />
+<Footer focus />
 
 <style>
   .focus {

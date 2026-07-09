@@ -1,7 +1,10 @@
 <script>
     import { socials } from "../data.js";
     import { reveal } from "../reveal.js";
+    import { link } from "svelte-spa-router";
     import SocialIcon from "./SocialIcon.svelte";
+
+    let { focus = false } = $props();
 
     const year = new Date().getFullYear();
 </script>
@@ -13,40 +16,49 @@
     <span style="flex:3.6; background:var(--blue);"></span>
 </div>
 
-<footer id="contact">
+<footer id={focus ? undefined : "contact"} class:focus>
     <div class="wrap">
-        <div use:reveal>
-            <div class="eyebrow"><span class="dot"></span>07 — Contact me</div>
-            <h2>Let's work together.</h2>
-            <a href="mailto:portfolio@devmeijer.com" class="email"
-                >portfolio@devmeijer.com</a
-            >
-        </div>
-
-        <div class="socials-block" use:reveal={{ delay: 60 }}>
-            <div class="find-label">Find me elsewhere</div>
-            <div class="socials">
-                {#each socials as s}
-                    <a
-                        class="social"
-                        style="--brand: {s.bg}"
-                        href={s.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label={s.label}
-                        title={s.label}
-                    >
-                        <span class="fill"></span>
-                        <span class="icon"><SocialIcon icon={s.icon} /></span>
-                    </a>
-                {/each}
+        {#if !focus}
+            <div use:reveal>
+                <div class="eyebrow"><span class="dot"></span>07 — Contact me</div>
+                <h2>Let's work together.</h2>
+                <a href="mailto:portfolio@devmeijer.com" class="email"
+                    >portfolio@devmeijer.com</a
+                >
             </div>
-        </div>
+
+            <div class="socials-block" use:reveal={{ delay: 60 }}>
+                <div class="find-label">Find me elsewhere</div>
+                <div class="socials">
+                    {#each socials as s}
+                        <a
+                            class="social"
+                            style="--brand: {s.bg}"
+                            href={s.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label={s.label}
+                            title={s.label}
+                        >
+                            <span class="fill"></span>
+                            <span class="icon"><SocialIcon icon={s.icon} /></span>
+                        </a>
+                    {/each}
+                </div>
+            </div>
+        {/if}
 
         <div class="copyright">
             <span>© {year} Kevin de Meijer</span>
-            <span>the Netherlands</span>
-            <a href="#top" class="back-to-top">Back to the top ↑</a>
+            {#if focus}
+                <a class="back-to-top" href="mailto:portfolio@devmeijer.com"
+                    >portfolio@devmeijer.com</a
+                >
+                <a class="back-to-top" href="/" use:link>← Back to index</a>
+            {:else}
+                <span>the Netherlands</span>
+                <a href="#top" class="back-to-top">Back to the top ↑</a>
+            {/if}
         </div>
     </div>
 </footer>
@@ -62,6 +74,10 @@
         background: #16150f;
         color: #f3f2ec;
         padding: clamp(80px, 14vh, 170px) 0 40px;
+    }
+
+    footer.focus {
+        padding: 0;
     }
 
     .wrap {
@@ -197,6 +213,12 @@
         letter-spacing: 0.08em;
         text-transform: uppercase;
         color: #76766f;
+    }
+
+    footer.focus .copyright {
+        margin-top: 0;
+        padding: 26px 0;
+        border-top: none;
     }
 
     .back-to-top {
