@@ -22,8 +22,8 @@
             <div use:reveal>
                 <div class="eyebrow"><span class="dot"></span>07 — Contact me</div>
                 <h2>Let's work together.</h2>
-                <a href="mailto:portfolio@devmeijer.com" class="email"
-                    >portfolio@devmeijer.com</a
+                <a href="mailto:hello@devmeijer.com" class="email"
+                    >hello@devmeijer.com</a
                 >
             </div>
 
@@ -51,8 +51,8 @@
         <div class="copyright">
             <span>© {year} Kevin de Meijer</span>
             {#if focus}
-                <a class="back-to-top" href="mailto:portfolio@devmeijer.com"
-                    >portfolio@devmeijer.com</a
+                <a class="back-to-top" href="mailto:hello@devmeijer.com"
+                    >hello@devmeijer.com</a
                 >
                 <a class="back-to-top" href="/" use:link>← Back to index</a>
             {:else}
@@ -71,9 +71,26 @@
     }
 
     footer {
-        background: #16150f;
-        color: #f3f2ec;
+        --fg: #f3f2ec;
+        --fg-strong: #ffffff;
+        --dim: #76766f;
+        --bg: #16150f;
+        --hr: #2c2b23;
+        --chip-bg: #f3f2ec;
+        --chip-fg: #16150f;
+
+        background: var(--bg);
+        color: var(--fg);
         padding: clamp(80px, 14vh, 170px) 0 40px;
+    }
+
+    :global(:root[data-theme="dark"]) footer {
+        --fg: #16150f;
+        --dim: #6d6c63;
+        --bg: #f3f2ec;
+        --hr: #dcdad0;
+        --chip-bg: #16150f;
+        --chip-fg: #f3f2ec;
     }
 
     footer.focus {
@@ -94,7 +111,7 @@
         font-size: 0.74rem;
         letter-spacing: 0.16em;
         text-transform: uppercase;
-        color: #76766f;
+        color: var(--dim);
     }
 
     .dot {
@@ -120,7 +137,7 @@
         font-weight: 400;
         letter-spacing: -0.02em;
         text-decoration: none;
-        color: #f3f2ec;
+        color: var(--fg);
         background-image: linear-gradient(var(--blue), var(--blue));
         background-repeat: no-repeat;
         background-position: 0 100%;
@@ -133,7 +150,7 @@
 
     .email:hover {
         background-size: 100% 100%;
-        color: #ffffff;
+        color: var(--fg-strong);
     }
 
     .socials-block {
@@ -145,7 +162,7 @@
         font-size: 0.72rem;
         letter-spacing: 0.14em;
         text-transform: uppercase;
-        color: #76766f;
+        color: var(--dim);
         margin-bottom: 18px;
     }
 
@@ -160,9 +177,9 @@
         display: block;
         width: 54px;
         height: 54px;
-        border: 2px solid #16150f;
+        border: 2px solid var(--chip-fg);
         overflow: hidden;
-        background: #f3f2ec;
+        background: var(--chip-bg);
     }
 
     .social .fill {
@@ -184,7 +201,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        color: #16150f;
+        color: var(--chip-fg);
         transition: color 0.42s;
         z-index: 2;
     }
@@ -203,7 +220,7 @@
     .copyright {
         margin-top: clamp(56px, 10vh, 110px);
         padding-top: 26px;
-        border-top: 1px solid #2c2b23;
+        border-top: 1px solid var(--hr);
         display: flex;
         gap: 18px;
         flex-wrap: wrap;
@@ -212,7 +229,7 @@
         font-size: 0.68rem;
         letter-spacing: 0.08em;
         text-transform: uppercase;
-        color: #76766f;
+        color: var(--dim);
     }
 
     footer.focus .copyright {
@@ -223,7 +240,7 @@
 
     .back-to-top {
         text-decoration: none;
-        color: #76766f;
+        color: var(--dim);
         background-image: linear-gradient(var(--blue), var(--blue));
         background-repeat: no-repeat;
         background-position: 0 100%;
@@ -236,6 +253,6 @@
 
     .back-to-top:hover {
         background-size: 100% 100%;
-        color: #ffffff;
+        color: var(--fg-strong);
     }
 </style>
