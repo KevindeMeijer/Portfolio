@@ -15,7 +15,7 @@ export const facts = [
   },
   {
     k: "Focus",
-    v: "Research/Design/Photography",
+    v: "Everything UX/UI & Photography",
     bg: "var(--yellow)",
     fg: "#16150F",
     sub: "rgba(22,21,15,0.6)",
@@ -51,7 +51,7 @@ export const work = [
     role: "UI/UX Design Intern",
     org: "Centraal Beheer Achmea",
     summary:
-      "Turned product research and requirements into tested, build-ready interface designs over a seven-month placement.",
+      "Extensive research on the process/funnel of insuring a car. And also saying yes to everything Centraal Beheer had to offer.",
     toolsLabel: "UX Design / UX Research / Figma",
   },
   {
@@ -60,9 +60,9 @@ export const work = [
     type: "Internship",
     meta: "Utrecht, NL · Hybrid",
     role: "Front-end Developer / UX Designer",
-    org: "DevDroplets · FyndR",
+    org: "DevDroplets | FyndR",
     summary:
-      "Built and styled front-end features while shaping the end-to-end experience of the FyndR product.",
+      "An educational database where students and teachers can upload files, webpages or presentations.",
     toolsLabel: "UX Design / Vue / SCSS / Figma / Git(labs)",
   },
   {
@@ -71,9 +71,9 @@ export const work = [
     type: "Internship",
     meta: "Utrecht, NL · On-site",
     role: "Front-end Developer / UX Designer",
-    org: "DevDroplets · Learning Analytics",
+    org: "DevDroplets | Learning Analytics (LeAn)",
     summary:
-      "My first professional role — developing front-end interfaces for a learning-analytics platform.",
+      "A learning-analytics platform where students could track their educational progress — teacher feedback, reviews done and given, and worked hours — all on one convenient page.",
     toolsLabel: "UX Design / Vue / SCSS / Figma / Git(labs)",
   },
 ];
@@ -89,14 +89,14 @@ export const craft = [
   {
     n: "02",
     title: "Photography",
-    items: "Event · Documentary · Editing & retouching in Lightroom",
+    items: "Event · Documentary · Editing & retouching in Lightroom Classic",
     color: "#F7C600",
   },
   {
     n: "03",
     title: "Front-end",
     items:
-      "HTML · CSS · SCSS / SASS · Component build — design grounded in code",
+      "HTML · CSS · Svelte · Lightweight code building with a touch of design",
     color: "#1E4FA3",
   },
 ];
@@ -106,10 +106,12 @@ export const tools = [
   { name: "Adobe InDesign", bg: "#1E4FA3", fg: "#FFFFFF" },
   { name: "Adobe Lightroom", bg: "#F7C600", fg: "#16150F" },
   { name: "Adobe Photoshop", bg: "#16150F", fg: "#FFFFFF" },
-  { name: "SCSS / SASS", bg: "#E0312A", fg: "#FFFFFF" },
+  { name: "Adobe XD", bg: "#E0312A", fg: "#FFFFFF" },
   { name: "HTML & CSS", bg: "#1E4FA3", fg: "#FFFFFF" },
-  { name: "Code review", bg: "#F7C600", fg: "#16150F" },
-  { name: "WCAG 2.x", bg: "#16150F", fg: "#FFFFFF" },
+  { name: "SCSS & SASS", bg: "#F7C600", fg: "#16150F" },
+  { name: "Code reviews", bg: "#16150F", fg: "#FFFFFF" },
+  { name: "Design reviews", bg: "#E0312A", fg: "#FFFFFF" },
+  { name: "WCAG 2.X", bg: "#1E4FA3", fg: "#FFFFFF" },
 ];
 
 // `href` opens the full series; `src` is the cover image (empty = placeholder).
@@ -137,26 +139,26 @@ export const photos = [
 export const education = [
   {
     period: "2019 — 2024",
-    title: "BSc — Open-ICT",
-    org: "Hogeschool Utrecht",
+    title: "BSc | HBO-ICT | Open-IT",
+    org: "University of Applied Sciences Utrecht",
     note: "Chairman at study association Indicium in 2021. Student mentor and reviewer for Open-IT students during my time at the Hogeschool Utrecht.",
   },
   {
     period: "2022 — 2023",
-    title: "Minor — Photojournalism & Visual Editing",
-    org: "Hogeschool Utrecht",
+    title: "Minor | Photojournalism & Visual Editing",
+    org: "University of Applied Sciences Utrecht",
     note: "Press & documentary photography, editing in Adobe Lightroom (Classic), writing articles. Documentary about local Repair Cafés.",
   },
   {
     period: "2017 — 2019",
     title: "Secondary Education (HAVO) — Economics & Society",
-    org: "Vituscollege",
+    org: "Vituscollege Bussum",
     note: "Active in stage lighting & sound, class representation, and Cambridge Advanced English. Graduated with an 8 on average.",
   },
   {
     period: "2012 — 2017",
     title: "Pre-University Education (VWO) — Science & Technology",
-    org: "Vituscollege",
+    org: "Vituscollege Bussum",
     note: "Active in stage lighting & sound, class representation, and Cambridge Advanced English.",
   },
 ];

@@ -9,7 +9,7 @@
     <div class="section-head" use:reveal>
       <div>
         <div class="eyebrow"><span class="dot"></span>04 — Photography</div>
-        <h2>Selected frames</h2>
+        <h2>My highlights</h2>
       </div>
       <p class="lede">Event &amp; documentary work — click a frame to open the full series.</p>
     </div>

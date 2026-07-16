@@ -9,9 +9,9 @@
     <div class="section-head" use:reveal>
       <div>
         <div class="eyebrow"><span class="dot"></span>01 — Experience</div>
-        <h2>Selected experience</h2>
+        <h2>Short CV</h2>
       </div>
-      <p class="lede">Five years in UX design, with roots in front-end development.</p>
+      <p class="lede">Five years in UX design, with roots in front-end development. Find my most up to date situation on <a class="inline-link" href="https://www.linkedin.com/in/kevindemeijer/" target="_blank" rel="noopener noreferrer">LinkedIn.</a></p>
     </div>
 
     <div>
@@ -76,6 +76,24 @@
     font-size: 0.98rem;
     line-height: 1.5;
     color: var(--text-muted);
+  }
+
+  .inline-link {
+    color: inherit;
+    text-decoration: none;
+    background-image: linear-gradient(var(--blue), var(--blue));
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    background-size: 100% 1.5px;
+    padding: 2px 3px;
+    transition:
+      background-size 0.35s ease,
+      color 0.35s ease;
+  }
+
+  .inline-link:hover {
+    background-size: 100% 100%;
+    color: var(--page);
   }
 
   .closing-line {
