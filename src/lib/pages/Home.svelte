@@ -25,6 +25,6 @@
 <style>
   #top {
     min-height: 100%;
-    overflow-x: hidden;
+    overflow-x: clip;
   }
 </style>

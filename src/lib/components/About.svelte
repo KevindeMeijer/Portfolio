@@ -6,7 +6,7 @@
     <div class="wrap">
         <div use:reveal>
             <div class="portrait">
-                <span>[ portrait ]</span>
+                <img src="/portrait.jpg" alt="Portrait of Kevin de Meijer" />
             </div>
         </div>
         <div use:reveal={{ delay: 80 }}>
@@ -52,25 +52,18 @@
     }
 
     .portrait {
-        aspect-ratio: 4 / 5;
+        aspect-ratio: 1 / 1;
         background-color: var(--ph-b);
-        background-image: repeating-linear-gradient(
-            135deg,
-            var(--ph-a) 0 10px,
-            var(--ph-b) 10px 20px
-        );
         border: 5px solid var(--ink);
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        overflow: hidden;
     }
 
-    .portrait span {
-        font-family: "Geist Mono", ui-monospace, monospace;
-        font-size: 0.72rem;
-        letter-spacing: 0.14em;
-        text-transform: uppercase;
-        color: var(--text-faintest);
+    .portrait img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 40% 0%;
+        display: block;
     }
 
     .eyebrow {

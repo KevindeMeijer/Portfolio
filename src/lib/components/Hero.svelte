@@ -17,9 +17,9 @@
             <h1>Designing products that feel effortless.</h1>
             <p class="intro">
                 I'm Kevin de Meijer — a UX designer and photographer based in
-                the Netherlands, currently shaping digital insurance products at
-                Centraal Beheer. A front-end background keeps my work grounded
-                in what's buildable: clear, accessible, human.
+                the Netherlands, designing digital products that put people
+                first. A front-end background keeps my work grounded in what's
+                buildable: clear, accessible and human.
             </p>
             <div class="ctas">
                 <a href="#work" class="cta-primary">View my work →</a>
